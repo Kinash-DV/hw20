@@ -1,0 +1,31 @@
+D:\EDU\Lesson20\Homework\hw20>docker build -t info-app -f Docker/Dockerfile .       
+[+] Building 42.3s (9/9) FINISHED                                                    
+=> [internal] load build definition from Dockerfile                                                                            0.1s  
+=> => transferring dockerfile: 158B                                                                                            0.0s  
+=> [internal] load .dockerignore                                                                                               0.1s  
+=> => transferring context: 2B                                                                                                 0.0s  
+=> [internal] load metadata for docker.io/library/openjdk:17-jdk-slim                                                          1.6s  
+=> [auth] library/openjdk:pull token for registry-1.docker.io                                                                  0.0s  
+=> [internal] load build context                                                                                               0.3s  
+=> => transferring context: 5.58kB                                                                                             0.3s  
+=> [1/3] FROM docker.io/library/openjdk:17-jdk-slim@sha256:aaa3b3cb27e3e520b8f116863d0580c438ed55ecfa0bc126b41f68c3f62f9774   37.9s  
+=> => resolve docker.io/library/openjdk:17-jdk-slim@sha256:aaa3b3cb27e3e520b8f116863d0580c438ed55ecfa0bc126b41f68c3f62f9774    0.1s  
+=> => sha256:aaa3b3cb27e3e520b8f116863d0580c438ed55ecfa0bc126b41f68c3f62f9774 547B / 547B                                      0.0s  
+=> => sha256:779635c0c3d23cc8dbab2d8c1ee4cf2a9202e198dfc8f4c0b279824d9b8e0f22 953B / 953B                                      0.0s  
+=> => sha256:37cb44321d0423bc57266a3bff658daf00478e4cdf2d3b8091f785310534256d 4.80kB / 4.80kB                                  0.0s  
+=> => sha256:1fe172e4850f03bb45d41a20174112bc119fbfec42a650edbbd8491aee32e3c3 31.38MB / 31.38MB                                6.6s  
+=> => sha256:44d3aa8d076675d49d85180b0ced9daef210fe4fdff4bdbb422b9cf384e591d0 1.58MB / 1.58MB                                  2.7s  
+=> => sha256:6ce99fdf16e86bd02f6ad66a0e1334878528b5a4b5487850a76e0c08a7a27d56 187.90MB / 187.90MB                             34.3s  
+=> => extracting sha256:1fe172e4850f03bb45d41a20174112bc119fbfec42a650edbbd8491aee32e3c3                                       2.4s  
+=> => extracting sha256:44d3aa8d076675d49d85180b0ced9daef210fe4fdff4bdbb422b9cf384e591d0                                       0.3s  
+=> => extracting sha256:6ce99fdf16e86bd02f6ad66a0e1334878528b5a4b5487850a76e0c08a7a27d56                                       3.2s  
+=> [2/3] WORKDIR /app                                                                                                          2.0s  
+=> [3/3] COPY target/hw20-0.0.1-SNAPSHOT.jar /app/app.jar                                                                      0.5s  
+=> exporting to image                                                                                                          0.1s  
+=> => exporting layers                                                                                                         0.1s  
+=> => writing image sha256:a8ee0d8652078c7a6f811a8079b5e3891816e54469dd29c014fd5431d0f74d5e                                    0.0s  
+=> => naming to docker.io/library/info-app                                                                                     0.0s  
+
+D:\EDU\Lesson20\Homework\hw20\Docker>docker images 
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+info-app     latest    a8ee0d865207   8 minutes ago   408MB
